@@ -16,7 +16,9 @@ Click on releases and download the .exe file.
 Download the .py (python) file in the main branch. (requires python to be installed on your computer)
 
 ## VERSION HISTORY
-v1.2 (Latest): Changed speed increase from 2 every 5 points to 0.2 every point. Made the points counter nicer. Added a speed indicator.
+v1.2.1 (Latest): Added version display in the game window.
+
+v1.2: Changed speed increase from 2 every 5 points to 0.2 every point. Made the points counter nicer. Added a speed indicator.
 
 v1.1: Added mouse support
 

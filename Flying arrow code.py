@@ -31,8 +31,13 @@ d.color('blue')
 c.penup()
 d.penup()
 g.penup()
+g.speed(0)
+a.speed(0)
+b.speed(0)
+c.speed(0)
+d.speed(0)
 g.goto(-480, -355)
-g.write("v1.2.1", font=("OCR A Extended", 20, "normal"))
+g.write("v1.2.2", font=("OCR A Extended", 20, "normal"))# version
 
 count = 0
 c.goto(360, 330)

@@ -16,5 +16,6 @@ Click on releases and download the .exe file.
 Download the .py (python) file in the main branch. (requires python to be installed on your computer)
 
 ## VERSION HISTORY
-v1.1 (Latest): Added mouse support 
+v1.1 (Latest): Added mouse support
+
 v1.0: Game released

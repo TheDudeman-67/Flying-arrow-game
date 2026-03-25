@@ -11,6 +11,7 @@ Get the highest score by staying alive the longest. Your score increases every t
 
 ### For players:
 Click on releases and download the .exe file. 
+
 NOTICE: When you double click the .exe to run it, your comoputer will most likely say this app may contain malware in an orange square. To run the game, click more info and then run anyways. 
 
 ### For those who want to see the code:

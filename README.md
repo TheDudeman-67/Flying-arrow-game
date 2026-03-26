@@ -19,6 +19,9 @@ NOTICE: When you double click the .exe to run it, your computer will most likely
 Download the .py (python) file in the main branch. (requires python to be installed on your computer)
 
 ## VERSION HISTORY
+
+NOTICE: Due to school, most updates will be on the weekends.
+
 v1.2.2 (Latest): Decreased load time
 
 v1.2.1: Added version display in the game window.

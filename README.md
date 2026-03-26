@@ -9,6 +9,7 @@ Holding down goes up and releasing goes down.
 ## OBJECTIVE
 Get the highest score by staying alive the longest. Your score increases every time you cross the right side. 
 
+## How to download
 ### For players:
 Click on releases and download the .exe file. 
 

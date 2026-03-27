@@ -22,7 +22,9 @@ Download the .py (python) file in the main branch. (requires python to be instal
 
 NOTICE: Due to school, most updates will be on the weekends.
 
-v1.2.2 (Latest): Decreased load time
+v1.2.3 (Latest): Made arrow les laggy by changing speed to 0.
+
+v1.2.2: Decreased load time
 
 v1.2.1: Added version display in the game window.
 

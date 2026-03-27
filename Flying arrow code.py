@@ -36,9 +36,13 @@ a.speed(0)
 b.speed(0)
 c.speed(0)
 d.speed(0)
+t.speed(0)
 g.goto(-480, -355)
-g.write("v1.2.2", font=("OCR A Extended", 20, "normal"))# version
-
+##
+##
+g.write("v1.2.3", font=("OCR A Extended", 20, "normal"))# version
+##
+##
 count = 0
 c.goto(360, 330)
 d.goto(-480, 330)

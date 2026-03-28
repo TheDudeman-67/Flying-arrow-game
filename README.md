@@ -22,7 +22,9 @@ Download the .py (python) file in the main branch. (requires python to be instal
 
 NOTICE: Due to school, most updates will be on the weekends.
 
-v1.2.3 (Latest): Made arrow movement smoother by setting its speed to 0.
+v1.3: Added restart button (r). Made death text nicer and bigger. 
+
+v1.2.3: Made arrow movement smoother by setting its speed to 0.
 
 v1.2.2: Decreased load time
 

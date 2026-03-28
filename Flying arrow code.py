@@ -5,7 +5,6 @@ screen.setup(width=1.0, height=1.0)
 screen.getcanvas().winfo_toplevel().state("zoomed")
 screen.setworldcoordinates(-500, -400, 500, 400)
 screen.bgcolor("black")
-game_running = False
 
 speed = 6
 
@@ -15,11 +14,14 @@ b=turtle.Turtle()
 c=turtle.Turtle()
 d=turtle.Turtle()
 g=turtle.Turtle()
+die=turtle.Turtle()
 g.hideturtle()
 d.hideturtle()
 a.hideturtle()
 b.hideturtle()
 c.hideturtle()
+die.hideturtle()
+die.color("orange")
 a.width(4)
 b.width(4)
 a.color("red")
@@ -28,9 +30,12 @@ c.color("blue")
 t.color("turquoise")
 g.color("green")
 d.color('blue')
+die.penup()
 c.penup()
 d.penup()
 g.penup()
+die.speed()
+die.goto(0, 0)
 g.speed(0)
 a.speed(0)
 b.speed(0)
@@ -40,7 +45,7 @@ t.speed(0)
 g.goto(-480, -355)
 ##
 ##
-g.write("v1.2.3", font=("OCR A Extended", 20, "normal"))# version
+g.write("v1.3", font=("OCR A Extended", 20, "normal"))# version
 ##
 ##
 count = 0
@@ -61,7 +66,40 @@ t.showturtle()
 screen.update()
 t.up = False
 dead = False
+game1 = True
 count = 0
+
+def restart():
+    global game1, count, speed, dead
+    
+    if not dead:
+        return
+
+    game1 = False
+    count = 0
+    speed = 6
+
+    die.clear()
+    t.hideturtle()
+    t.penup()
+    t.clear()
+    t.goto(-500, 0)
+    t.pendown()
+    t.showturtle()
+    screen.update()
+    
+    for ob in death_circles:
+        ob.hideturtle()
+    death_circles.clear()
+    
+    t.up = False
+    dead = False
+    game1 = True
+
+    screen.ontimer(loop, 16)
+
+    
+
 
 def draw_border():
     a.penup()
@@ -98,8 +136,14 @@ def collision():
     return False
 
 def loop():
-    counter()
+    global game1
     global dead, count, speed
+    if game1 == False:
+        return
+    if dead:
+            die.write("U died", align=("center"), font=("OCR A extended", 150, "normal"))
+            game1 = False
+    counter()
     if dead:
         return
     x, y = t.pos()
@@ -122,17 +166,12 @@ def loop():
         spawn_circle()
     if nextposy < -320:
         dead = True
-        t.write("U died",font=("OCR A extended", 20, "normal"))
     if nextposy > 320:
         dead = True
-        t.write("U died",font=("OCR A extended", 20, "normal"))
     if collision():
-        t.write("U died",font=("OCR A extended", 20, "normal"))
         dead = True
-        return
-        
-
-    screen.ontimer(loop, 16)
+    if game1:
+        screen.ontimer(loop, 16)
     screen.update()
 
 screen.listen()
@@ -141,6 +180,7 @@ screen.onkeypress(up1, "space")
 screen.onkeyrelease(up0, "space")
 screen.onkeypress(up1, "Left")
 screen.onkeyrelease(up0, "Left")
+screen.onkeypress(restart, 'r')
 canvas = screen.getcanvas()
 canvas.bind("<ButtonPress-1>", lambda e: up1())
 canvas.bind("<ButtonRelease-1>", lambda e: up0())

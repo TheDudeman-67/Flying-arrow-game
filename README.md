@@ -22,7 +22,9 @@ Download the .py (python) file in the main branch. (requires python to be instal
 
 NOTICE: Due to school, most updates will be on the weekends.
 
-v1.3 (Latest): Added restart button (r). Made death text nicer and bigger. 
+v1.4 (Latest): Added highscore to game session. (Closing the game resets highscore)
+
+v1.3: Added restart button (r). Made death text nicer and bigger. 
 
 v1.2.3: Made arrow movement smoother by setting its speed to 0.
 

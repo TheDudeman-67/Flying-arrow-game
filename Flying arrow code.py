@@ -43,12 +43,29 @@ c.speed(0)
 d.speed(0)
 t.speed(0)
 g.goto(-480, -355)
+high=turtle.Turtle()
+high.hideturtle()
+high.penup()
+high.speed(0)
+high.goto(0,-120)
+high.color('light green')
+high1=turtle.Turtle()
+high1.hideturtle()
+high1.penup()
+high1.speed(0)
+high1.goto(0,-250)
+high1.color('light blue')
+highdisp=turtle.Turtle()
+highdisp.hideturtle()
+highdisp.penup()
+highdisp.speed(0)
+highdisp.goto(0, 330)
+highdisp.color('blue')
 ##
 ##
-g.write("v1.3", font=("OCR A Extended", 20, "normal"))# version
+g.write("v1.4", font=("OCR A Extended", 20, "normal"))# version
 ##
 ##
-count = 0
 c.goto(360, 330)
 d.goto(-480, 330)
 
@@ -68,6 +85,18 @@ t.up = False
 dead = False
 game1 = True
 count = 0
+highscore = 0
+highdisp.write('highscore = ' + str(highscore), align='center', font=('OCR A extended', 20, 'normal'))
+
+def highscore_new():
+    global count, highscore
+    if count > highscore:
+        highscore = count
+        high.write('New Highscore!', align="center", font=("OCR A extended", 80, "normal"))
+        high1.write(str(highscore), align='center', font=('OCR A extended', 60, 'normal'))
+        highdisp.clear()
+        highdisp.write('highscore = ' + str(highscore), align='center', font=('OCR A extended', 20, 'normal'))
+        
 
 def restart():
     global game1, count, speed, dead
@@ -80,6 +109,8 @@ def restart():
     speed = 6
 
     die.clear()
+    high.clear()
+    high1.clear()
     t.hideturtle()
     t.penup()
     t.clear()
@@ -142,6 +173,7 @@ def loop():
         return
     if dead:
             die.write("U died", align=("center"), font=("OCR A extended", 150, "normal"))
+            highscore_new()
             game1 = False
     counter()
     if dead:

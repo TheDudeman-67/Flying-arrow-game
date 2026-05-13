@@ -11,7 +11,7 @@ Get the highest score by staying alive the longest. Your score increases every t
 
 ## How to download
 ### For players:
-Click on releases and download the .exe file. 
+Click on releases and then download and run the setup wizard. 
 
 NOTICE: When you double click the .exe to run it, your computer will most likely say this app may contain malware in an orange square. To run the game, click more info and then run anyways. (It says this because im not licensed yet)
 

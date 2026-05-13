@@ -1,6 +1,6 @@
 # Flying Arrow
 
-<img width="960" height="564" alt="image" src="https://github.com/user-attachments/assets/d87d3e9e-f763-4063-a6b8-d717d578641b" />
+<img width="480" height="282" alt="image" src="https://github.com/user-attachments/assets/d87d3e9e-f763-4063-a6b8-d717d578641b" />
 
 My first ever game at 14 years old. Only 15% AI.
 

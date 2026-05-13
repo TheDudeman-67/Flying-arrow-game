@@ -13,8 +13,6 @@ Get the highest score by staying alive the longest. Your score increases every t
 ### For players:
 Click on releases and then download and run the setup wizard. 
 
-NOTICE: When you double click the .exe to run it, your computer will most likely say this app may contain malware in an orange square. To run the game, click more info and then run anyways. (It says this because im not licensed yet)
-
 ### For those who want to see the code:
 Download the .py (python) file in the main branch. (requires python to be installed on your computer)
 
@@ -22,7 +20,9 @@ Download the .py (python) file in the main branch. (requires python to be instal
 
 NOTICE: Due to school, most updates will be on the weekends.
 
-v1.4 (Latest): Added highscore to game session. (Closing the game resets highscore)
+v1.5 (Latest): Added background music.
+
+v1.4: Added highscore to game session. (Closing the game resets highscore)
 
 v1.3: Added restart button (r). Made death text nicer and bigger. 
 

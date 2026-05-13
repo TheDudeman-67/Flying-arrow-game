@@ -15,7 +15,7 @@ Get the highest score by staying alive the longest. Your score increases every t
 ### For players:
 https://github.com/TheDudeman-67/Flying-arrow-game/releases/tag/v1.5
 
-Then download the Flying arrow exe. 
+Then download the Flying_arrow_setup.exe. 
 
 NOTICE: When you run the installer, your computer will say may contain malware. This is normal, as i am not licensed yet because it costs a lot. To run the setup, click more info and then run anyways. 
 

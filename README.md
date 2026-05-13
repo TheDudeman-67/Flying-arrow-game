@@ -6,7 +6,7 @@ My first ever game at 14 years old. Only 15% AI.
 
 ## CONTROLS
 Use the spacebar or the mouse to make the arrow avoid red obstacles.
-Holding down goes up and releasing goes down.
+Holding down the key make the arrow go up and releasing the key goes down.
 
 ## OBJECTIVE
 Get the highest score by staying alive the longest. Your score increases every time you cross the right side. 
@@ -14,6 +14,7 @@ Get the highest score by staying alive the longest. Your score increases every t
 ## How to download
 ### For players:
 https://github.com/TheDudeman-67/Flying-arrow-game/releases/tag/v1.5
+
 Then download the Flying arrow exe. 
 
 NOTICE: When you run the installer, your computer will say may contain malware. This is normal, as i am not licensed yet because it costs a lot. To run the setup, click more info and then run anyways. 

@@ -1,6 +1,6 @@
 # Flying Arrow
 
-My first ever game at 14 years old. Only 10% AI.
+My first ever game at 14 years old. Only 15% AI.
 
 ## CONTROLS
 Use the spacebar or the mouse to make the arrow avoid red obstacles.
@@ -11,9 +11,9 @@ Get the highest score by staying alive the longest. Your score increases every t
 
 ## How to download
 ### For players:
-Click on releases and then download and run the setup wizard. 
+https://github.com/TheDudeman-67/Flying-arrow-game/releases/tag/v1.5
 
-NOTICE: When you run the installer, your computer will say may contain malware. This is normal, as i am not liscensed yet because it costs a lot. To run the setup, click more info and then run anyways. 
+NOTICE: When you run the installer, your computer will say may contain malware. This is normal, as i am not licensed yet because it costs a lot. To run the setup, click more info and then run anyways. 
 
 ### For those who want to see the code:
 Download the .py (python) file in the main branch. (requires python to be installed on your computer)

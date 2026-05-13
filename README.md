@@ -18,6 +18,9 @@ NOTICE: When you run the installer, your computer will say may contain malware. 
 ### For those who want to see the code:
 Download the .py (python) file in the main branch. (requires python to be installed on your computer)
 
+## To Delete:
+Go into settings (windows settings) > apps > installed apps > Flying arrow. Click the 3 dots and click uninstall.
+
 ## VERSION HISTORY
 
 NOTICE: Due to school, most updates will be on the weekends.

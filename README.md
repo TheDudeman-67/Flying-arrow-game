@@ -7,6 +7,7 @@ My first ever game at 14 years old. Only 15% AI.
 ## CONTROLS
 Use the spacebar or the mouse to make the arrow avoid red obstacles.
 Holding down the key make the arrow go up and releasing the key goes down.
+Escape closes the game. 
 
 ## OBJECTIVE
 Get the highest score by staying alive the longest. Your score increases every time you cross the right side. 
@@ -29,7 +30,14 @@ Go into settings (windows settings) > apps > installed apps > Flying arrow. Clic
 
 NOTICE: Due to school, most updates will be on the weekends.
 
-v1.5 (Latest): Added background music (Theory of everything).
+v1.6 (Latest): Added a cool death animation.
+Made background turn red upon dying.
+Made obstacles disappear on death.
+Escape key now instantly closes the game.
+Prevented obstacles from spawning over texts.
+And some fixes to reduce lag.
+
+v1.5: Added background music (Theory of everything).
 Changed to a setup wizard instead of exe.
 
 v1.4: Added highscore to game session. (Closing the game resets highscore)

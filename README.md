@@ -14,7 +14,7 @@ Get the highest score by staying alive the longest. Your score increases every t
 
 ## How to download
 ### For players:
-https://github.com/TheDudeman-67/Flying-arrow-game/releases/tag/v1.5
+https://github.com/TheDudeman-67/Flying-arrow-game/releases/tag/v1.6
 
 Then download the Flying_arrow_setup.exe. 
 

@@ -3,11 +3,20 @@ import random
 import sounddevice as sd
 import soundfile as sf
 import threading
+import os
+import time
+os.chdir(os.path.dirname(__file__))
 screen=turtle.Screen()
 screen.setup(width=1.0, height=1.0)
 screen.getcanvas().winfo_toplevel().state("zoomed")
 screen.setworldcoordinates(-500, -400, 500, 400)
 screen.bgcolor("black")
+screen.title("Flying arrow")
+
+import tkinter as tk
+canvas = screen.getcanvas()
+root = canvas.winfo_toplevel()
+root.overrideredirect(True)   # removes window frame
 
 speed = 6
 
@@ -37,7 +46,7 @@ die.penup()
 c.penup()
 d.penup()
 g.penup()
-die.speed()
+die.speed(0)
 die.goto(0, 0)
 g.speed(0)
 a.speed(0)
@@ -66,7 +75,7 @@ highdisp.goto(0, 330)
 highdisp.color('blue')
 ##
 ##
-g.write("v1.5", font=("OCR A Extended", 20, "normal"))# version
+g.write("v1.6", font=("OCR A Extended", 20, "normal"))# version
 ##
 ##
 c.goto(360, 330)
@@ -103,9 +112,9 @@ def highscore_new():
 import time
 
 music_stop = False
+data, samplerate = sf.read("Song.wav")
 def loop_music():
     global music_stop
-    data, samplerate = sf.read("Song.wav")
     while True:
         if not music_stop:
             sd.play(data, samplerate)
@@ -116,16 +125,18 @@ def loop_music():
 
 threading.Thread(target=loop_music, daemon=True).start()
 
-
 def restart():
-    global game1, count, speed, dead, music_stop
-    
+    global game1, count, speed, dead, music_stop, death_anim, rotating
     if not dead:
         return
 
     game1 = False
+    death_anim = False
+    rotating = False
     count = 0
     speed = 6
+
+    screen.bgcolor("black")
 
     die.clear()
     high.clear()
@@ -162,6 +173,48 @@ def draw_border():
     a.goto(500, -320)
     b.goto(500, 320)
 
+death_anim = False
+
+def rotate():
+    global rotating
+    t.left(10)
+
+    if t.ycor() <= -320:
+        rotating = False
+        return
+
+    if rotating:
+        screen.ontimer(rotate, 20)
+
+def down():
+    if not death_anim:
+        return 
+    global rotating
+    x = t.xcor()
+    y = t.ycor()
+    if y > -320:
+        t.goto(x, y - 5)
+    screen.ontimer(down, 28)
+
+def death_animation():
+    global death_anim
+    global rotating
+    rotating = True
+    t.speed(0)
+    t.penup()
+    if death_anim:
+        if not death_anim:
+            return
+
+    if death_anim:
+        rotate()
+        down()
+
+def close_window():
+    global game1
+    game1 = False
+    screen.bye()
+
 def counter():
     c.clear()
     c.write('score = ' + str(count), font=("OCR A Extended", 20, "normal"))
@@ -173,7 +226,7 @@ def spawn_circle():
     ob.color("red")
     ob.turtlesize(4)
     ob.penup()
-    ob.goto(random.randint(-400, 500), random.randint(-320, 310))
+    ob.goto(random.randint(-400, 500), random.randint(-260, 260))
     death_circles.append(ob)
 
 def up1():
@@ -192,11 +245,18 @@ def loop():
     if game1 == False:
         return
     if dead:
+            global death_anim
+            death_anim = True
+            death_animation()
+            screen.bgcolor("dark red")
             die.write("U died", align=("center"), font=("OCR A extended", 150, "normal"))
             highscore_new()
             game1 = False
             music_stop = True
             sd.stop()
+            for ob in death_circles:
+                ob.hideturtle()
+            death_circles.clear()
     counter()
     if dead:
         return
@@ -226,7 +286,7 @@ def loop():
         dead = True
     if game1:
         screen.ontimer(loop, 16)
-    screen.update()
+    
 
 screen.listen()
 
@@ -235,13 +295,15 @@ screen.onkeyrelease(up0, "space")
 screen.onkeypress(up1, "Left")
 screen.onkeyrelease(up0, "Left")
 screen.onkeypress(restart, 'r')
-canvas = screen.getcanvas()
+screen.onkeypress(close_window, 'Escape')
 canvas.bind("<ButtonPress-1>", lambda e: up1())
 canvas.bind("<ButtonRelease-1>", lambda e: up0())
 
-
-
+def update():
+    screen.update()
+    screen.ontimer(update, 16)
 
 draw_border()
+update()
 loop()
 screen.mainloop()

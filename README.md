@@ -7,6 +7,7 @@ My first ever game at 14 years old. Only 15% AI.
 ## CONTROLS
 Use the spacebar or the mouse to make the arrow avoid red obstacles.
 Holding down the key make the arrow go up and releasing the key goes down.
+R key to restart.
 Escape closes the game. 
 
 ## OBJECTIVE

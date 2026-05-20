@@ -8,7 +8,7 @@ My first ever game at 14 years old. Only 15% AI.
 Use the spacebar or the mouse to make the arrow avoid red obstacles.
 Holding down the key make the arrow go up and releasing the key goes down.
 R key to restart.
-Escape closes the game. 
+E key closes the game. 
 
 ## OBJECTIVE
 Get the highest score by staying alive the longest. Your score increases every time you cross the right side. 
@@ -31,7 +31,15 @@ Go into settings (windows settings) > apps > installed apps > Flying arrow. Clic
 
 NOTICE: Due to school, most updates will be on the weekends.
 
-v1.6 (Latest): Added a cool death animation.
+v1.7 (Latest): Death animation launches faster.
+Attempts counter.
+Changed song to Resonance by HOME.
+e key to exit.
+p to pause game.
+Made obstacles rotate :)
+made collision a bit more fair now with spinning stuff.
+
+v1.6: Added a cool death animation.
 Made background turn red upon dying.
 Made obstacles disappear on death.
 Escape key now instantly closes the game.

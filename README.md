@@ -9,6 +9,7 @@ Use the spacebar or the mouse to make the arrow avoid red obstacles.
 Holding down the key make the arrow go up and releasing the key goes down.
 R key to restart.
 E key closes the game. 
+P key to pause.
 
 ## OBJECTIVE
 Get the highest score by staying alive the longest. Your score increases every time you cross the right side. 
